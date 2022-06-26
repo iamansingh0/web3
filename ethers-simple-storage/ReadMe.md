@@ -10,7 +10,7 @@ After installing wsl, set username and password. Now open vscode and download an
  2. Install node js in your environment 
   - ``curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash``
  
- 3. Install yarn package manager ``corepack enable``
+ 3. Install yarn package manager | ``corepack enable``
  >You can use NPM package manager also for this job but i prefer yarn.
  4. Now to compile solidity smart contract, you need to install **solc**, to install it run this command => ``yarn add solc``
  
