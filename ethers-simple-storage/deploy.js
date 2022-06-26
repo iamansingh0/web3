@@ -1,5 +1,5 @@
 async function main() {
-    
+    // compile them separately
 }
 
 main()
