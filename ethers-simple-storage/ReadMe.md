@@ -32,4 +32,17 @@ After installing wsl, set username and password. Now open vscode and download an
 ### Deploy the Smart Contract: 
 ---
 #### Deploy in JavaScript Virtual Machine (Fake Blockchain)
-For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ganache/)**, it is similar to virtual machine in *[Remix Ethereum IDE](https://remix-project.org/)*.
+For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ganache/)**, it is similar to virtual machine in *[Remix Ethereum IDE](https://remix-project.org/)*. We can run it locally to run, test and deploy smart contracts.
+ > Open Ganache and just click on *quickstart*, it gives atleast 10 fake accounts with 100 eth each.
+ 1. Here [ethers.js](https://docs.ethers.io/v5/) comes into play, download it | ``yarn add ethers``
+ 2. Copy Ganache's RPC Server and private key of one of the account, use them in **deploy.js** file this way:
+ ``` format javascript
+const  ethers = require("ethers");
+async  function  main() {
+// http://0.0.0.0.7545 ganache rpc
+// 40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d private key
+const  provider = new  ethers.providers.JsonRpcProvider("http://127.0.0.1:7545");
+const wallet = new ethers.Wallet("40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d", provider);
+}
+```
+> Using private key directly in code is not recommend but let's do it here :)
