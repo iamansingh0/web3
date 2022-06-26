@@ -6,6 +6,7 @@ After installing wsl, set username and password. Now open vscode and download an
 
 ## You need to follow these steps
 ### Compile the Smart Contract:
+---
  1. Make a smart contract with *.sol* extenstion
  2. Install node js in your environment 
   - ``curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash``
@@ -29,3 +30,6 @@ After installing wsl, set username and password. Now open vscode and download an
 > Now whenever we type *yarn compile* in terminal, it will automatically run this command as long as I am in the same folder.
 
 ### Deploy the Smart Contract: 
+---
+#### Deploy in JavaScript Virtual Machine (Fake Blockchain)
+For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ganache/)**, it is similar to virtual machine in *[Remix Ethereum IDE](https://remix-project.org/)*.
