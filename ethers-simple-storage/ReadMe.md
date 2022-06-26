@@ -1,9 +1,10 @@
-# If you want to run this in your wsl vs code environment.
+# If you want to run this in your WSL Visual Studio Code environment.
 Hi! So first you need to install **wsl** in your environment. It lets you work on linux environment within your local environment.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 
 After installing wsl, set username and password. Now open vscode and download an extension called **remote development**. Open command Palette and search *open in wsl window*. It will open vs code in wsl environment. Make a folder and run these commands in that folder's *terminal*.
 
+## You need to follow these steps
  1. Make a smart contract with *.sol* extenstion
  2. Install node js in your environment 
   - ``curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash``
