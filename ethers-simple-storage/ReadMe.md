@@ -14,7 +14,7 @@ After installing wsl, set username and password. Now open vscode and download an
  4. Now to compile solidity smart contract, you need to install **solc**, to install it run this command => ``yarn add solc``
  
  6. If you want to install a particular version, you need a little bit different syntax, as I am using ``solidity 0.8.7`` version here so to install it using -> 
-  - **``yarn add solc@0.8.7-fixed``**
+  - **```yarn add solc@0.8.7-fixed```**
  
  7. To *compile* smart contract :
   - ``yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . [contract-name]``
