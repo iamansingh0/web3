@@ -27,7 +27,7 @@ After installing wsl, set username and password. Now open vscode and download an
 "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol"
 }
 ```
-> Now whenever we type ``*yarn compile*`` in terminal, it will automatically run this command as long as I am in the same folder.
+> Now whenever we type ``yarn compile`` in terminal, it will automatically run this command as long as I am in the same folder.
 
 ### Deploy the Smart Contract: 
 ---
