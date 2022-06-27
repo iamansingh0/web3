@@ -27,7 +27,7 @@ After installing wsl, set username and password. Now open vscode and download an
 "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol"
 }
 ```
-> Now whenever we type *yarn compile* in terminal, it will automatically run this command as long as I am in the same folder.
+> Now whenever we type ``yarn compile`` in terminal, it will automatically run this command as long as I am in the same folder.
 
 ### Deploy the Smart Contract: 
 ---
@@ -40,9 +40,20 @@ For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ga
 const  ethers = require("ethers");
 async  function  main() {
 // http://0.0.0.0.7545 ganache rpc
-// 40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d private key
+// bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a0589e2838bcefe54719e private key
 const  provider = new  ethers.providers.JsonRpcProvider("http://127.0.0.1:7545");
-const wallet = new ethers.Wallet("40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d", provider);
+const wallet = new ethers.Wallet("bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a0589e2838bcefe54719e", provider);
 }
 ```
 > Using private key directly in code is not recommend but let's do it here :)
+3. Now that we have provider and wallet, let's go and grab contract details from ***SimpleStorage_sol_SimpleStorage.abi*** and ***SimpleStorage_sol_SimpleStorage.bin*** files. To deploy our contract we need abi and bin data of the contract, so to read data from these files we are gonna need a package called **fs**.
+4. On the top of *deploy.js* file add a line:
+ ```format solidity
+const fs = require("fs");
+```
+5. If package fs doesn't come with your *node_modules*, you can add it | ``yarn add fs ``
+6. Now to read these two files, add these given lines in main function:
+```format solidity
+const  abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
+const  bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
+```
