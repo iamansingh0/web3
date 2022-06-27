@@ -63,3 +63,19 @@ const  abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
 const  bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
 ```
 8. Now we can create something called contract factory. To deploy a [Contract](https://docs.ethers.io/v5/api/contract/contract/), additional information is needed that is not available on a Contract object itself. Mainly, the bytecode (more specifically the initcode) of a contract is required. [Contract Factory](https://docs.ethers.io/v5/api/contract/contract-factory/) does this job.
+
+8. Add these lines in *deploy.js* **main()** function:
+```format solidity
+const  contractFactory = new  ethers.ContractFactory(abi, bin, wallet);
+console.log("Delploying.....");
+const  contract = await  contractFactory.deploy();
+// await -> stop here, wait for the contract to deploy
+console.log(contract);
+```
+Before deploying it, you need to do a little change in your ganache server.
+**Quickstart < gear icon at top right < server tab < change the hostname with Wsl name on it**
+> Check rpc server link and private key, they might have been changed.
+
+9. Now to deploy this contract run a commaand | ``node deploy.js``
+
+11. We can see in the transaction tab on ganache that we payed some gas fees for contract creation. 
