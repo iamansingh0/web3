@@ -72,7 +72,7 @@ const  contract = await  contractFactory.deploy();
 // await -> stop here, wait for the contract to deploy
 console.log(contract);
 ```
-Before deploying it, you need to do a little change in your ganache server.
+<mark>Before deploying it</mark>, you need to do a little change in your ganache server.
 **Quickstart < gear icon at top right < server tab < change the hostname with Wsl name on it**
 > Check rpc server link and private key, they might have been changed.
 
