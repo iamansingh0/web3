@@ -1,4 +1,4 @@
-# If you want to run this in your WSL Visual Studio Code environment.
+# How to deploy a smart contract using Ethers.js.
 Hi! So first you need to install **wsl** in your environment. It lets you work on linux environment within your local environment.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 
