@@ -1,4 +1,4 @@
-# If you want to run this in your WSL Visual Studio Code environment.
+# How to deploy a smart contract using Ethers.js.
 Hi! So first you need to install **wsl** in your environment. It lets you work on linux environment within your local environment.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 
@@ -81,5 +81,23 @@ console.log(contract);
 11. We can see in the transaction tab on ganache that we payed some gas fees for contract creation. 
 ![contract creation](contractCreation.png)
 
-11. You just deployed a contract on a locak blockchain whoa ! 😎
-12. <span style="color:red">some *blue* text</span>
+### You just deployed a contract on a local blockchain whoa ! 😎
+
+# Interact with SimpleStorage Smart Contract
+Before starting interacting with this contract, I must tell you what this smart contract do!
+## What does this contract do?
+
+| Functions and Variables      | What they do |
+| ----------- | ----------- |
+| 1. ``uint256 favoriteNumber``     | `It is a global variable to store an uint256 number.       |
+| 2. ``struct People`` | It is a struct and stores name and fav number.        |
+| 3. ``People[]  public people``   | people Array of type People.        |
+| 4. `mapping(string => uint256)  public nameToFavoriteNumber`   |  Mapping name to fav number.      |
+| 5. ``function store(uint256)``  | It's a function that takes a number and update global variable favoriteNumber to it.        |
+| 6. `function retrieve()`   | It's a view function, it returns the number stored in point 1. variable.       |
+| 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
+
+## Deploying it in remix IDE
+It will look like this:
+---
+<img src="remixDeployed.png" alt="center" width="200"/>
