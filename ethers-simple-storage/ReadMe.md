@@ -35,7 +35,8 @@ After installing wsl, set username and password. Now open vscode and download an
 For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ganache/)**, it is similar to virtual machine in *[Remix Ethereum IDE](https://remix-project.org/)*. We can run it locally to run, test and deploy smart contracts.
  > Open Ganache and just click on *quickstart*, it gives atleast 10 fake accounts with 100 eth each.
  1. Here [ethers.js](https://docs.ethers.io/v5/) comes into play, download it | ``yarn add ethers``
- 2. Copy Ganache's RPC Server and private key of one of the account, use them in **deploy.js** file this way:
+
+ 3. Copy Ganache's RPC Server and private key of one of the account, use them in **deploy.js** file this way:
  ``` format javascript
 const  ethers = require("ethers");
 async  function  main() {
@@ -46,14 +47,39 @@ const wallet = new ethers.Wallet("bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a05
 }
 ```
 > Using private key directly in code is not recommend but let's do it here :)
+
 3. Now that we have provider and wallet, let's go and grab contract details from ***SimpleStorage_sol_SimpleStorage.abi*** and ***SimpleStorage_sol_SimpleStorage.bin*** files. To deploy our contract we need abi and bin data of the contract, so to read data from these files we are gonna need a package called **fs**.
-4. On the top of *deploy.js* file add a line:
+
+5. On the top of *deploy.js* file add a line:
  ```format solidity
 const fs = require("fs");
 ```
-5. If package fs doesn't come with your *node_modules*, you can add it | ``yarn add fs ``
-6. Now to read these two files, add these given lines in main function:
+
+6. If package fs doesn't come with your *node_modules*, you can add it | ``yarn add fs ``
+
+7. Now to read these two files, add these given lines in main function:
 ```format solidity
 const  abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
 const  bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
 ```
+8. Now we can create something called contract factory. To deploy a [Contract](https://docs.ethers.io/v5/api/contract/contract/), additional information is needed that is not available on a Contract object itself. Mainly, the bytecode (more specifically the initcode) of a contract is required. [Contract Factory](https://docs.ethers.io/v5/api/contract/contract-factory/) does this job.
+
+8. Add these lines in *deploy.js* **main()** function:
+```format solidity
+const  contractFactory = new  ethers.ContractFactory(abi, bin, wallet);
+console.log("Delploying.....");
+const  contract = await  contractFactory.deploy();
+// await -> stop here, wait for the contract to deploy
+console.log(contract);
+```
+<mark>Before deploying it</mark>, you need to do a little change in your ganache server.
+**Quickstart < gear icon at top right < server tab < change the hostname with Wsl name on it**
+> Check rpc server link and private key, they might have been changed.
+
+9. Now to deploy this contract run a commaand | ``node deploy.js``
+
+11. We can see in the transaction tab on ganache that we payed some gas fees for contract creation. 
+![contract creation](contractCreation.png)
+
+11. You just deployed a contract on a locak blockchain whoa ! 😎
+12. <span style="color:red">some *blue* text</span>
