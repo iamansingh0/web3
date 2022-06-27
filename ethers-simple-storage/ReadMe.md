@@ -99,4 +99,5 @@ Before starting interacting with this contract, I must tell you what this smart 
 
 ## Deploying it in remix IDE
 It will look like this:
-![deployed in remix](remixDeployed.png);
+---
+<img src="remixDeployed.png" alt="remix Deployed" width="200"/>
