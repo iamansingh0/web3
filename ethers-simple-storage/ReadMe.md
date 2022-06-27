@@ -82,3 +82,17 @@ console.log(contract);
 ![contract creation](contractCreation.png)
 
 ### You just deployed a contract on a local blockchain whoa ! 😎
+
+# Interact with SimpleStorage Smart Contract
+Before starting interacting with this contract, I must tell you what this smart contract do!
+## What does this contract do?
+
+| Functions and Variables      | What they do |
+| ----------- | ----------- |
+| 1. ``uint256 favoriteNumber``     | `It is a global variable to store an uint256 number.       |
+| 2. ``struct People`` | It is a struct and stores name and fav number.        |
+| 3. ``People[]  public people``   | people Array of type People.        |
+| 4. `mapping(string => uint256)  public nameToFavoriteNumber`   |  Mapping name to fav number.      |
+| 5. ``function store(uint256)``  | It's a function that takes a number and update global variable favoriteNumber to it.        |
+| 6. `function retrieve()`   | It's a view function, it returns the number stored in point 1. variable.       |
+| 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
