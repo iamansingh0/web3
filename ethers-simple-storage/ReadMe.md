@@ -40,9 +40,9 @@ For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ga
 const  ethers = require("ethers");
 async  function  main() {
 // http://0.0.0.0.7545 ganache rpc
-// 40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d private key
+// bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a0589e2838bcefe54719e private key
 const  provider = new  ethers.providers.JsonRpcProvider("http://127.0.0.1:7545");
-const wallet = new ethers.Wallet("40d9224f8e1aaac84a6a9d092d834aa65dacab721e3ece9ee8f7792eff41a00d", provider);
+const wallet = new ethers.Wallet("bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a0589e2838bcefe54719e", provider);
 }
 ```
 > Using private key directly in code is not recommend but let's do it here :)
