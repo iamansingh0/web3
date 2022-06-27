@@ -79,3 +79,4 @@ Before deploying it, you need to do a little change in your ganache server.
 9. Now to deploy this contract run a commaand | ``node deploy.js``
 
 11. We can see in the transaction tab on ganache that we payed some gas fees for contract creation. 
+![contract creation](contractCreation.png)
