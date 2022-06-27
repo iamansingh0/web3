@@ -96,3 +96,7 @@ Before starting interacting with this contract, I must tell you what this smart 
 | 5. ``function store(uint256)``  | It's a function that takes a number and update global variable favoriteNumber to it.        |
 | 6. `function retrieve()`   | It's a view function, it returns the number stored in point 1. variable.       |
 | 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
+
+## Deploying it in remix IDE
+It will look like this:
+![deployed in remix](remixDeployed.png);
