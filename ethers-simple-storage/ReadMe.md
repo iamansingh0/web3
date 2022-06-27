@@ -101,5 +101,5 @@ Before starting interacting with this contract, I must tell you what this smart 
 #### It will look like this:
 ---
 <p align="center">
-  <img width="250" height="500" src="remixDeployed.png">
+  <img width="350" height="500" src="remixDeployed.png">
 </p>
