@@ -1,4 +1,5 @@
-img[alt="center"] {
-    position: relative;
-    left: 50%;
-}
+img[src$="centerme"] {
+    display:block;
+    margin: 0 auto;
+    width: 200px;
+  }
