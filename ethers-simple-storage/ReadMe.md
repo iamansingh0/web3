@@ -98,6 +98,13 @@ Before starting interacting with this contract, I must tell you what this smart 
 | 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
 
 ## Deploying it in remix IDE
-It will look like this:
+#### It will look like this:
 ---
-![Deployed in remix](remixDeployed.png?style=centerme)
+<p align="center">
+  <img width="350" height="500" src="remixDeployed.png">
+</p>
+
+1. Give a number in store function's parameter, click store.
+2. To view the favorite number, click retrieve.
+3. In addPerson, we can store name with theri fav number and to them pass the index in people array, it will return its fav number.
+4. If we pass index in nameToFavNumber, it will return name and their favNumber.
