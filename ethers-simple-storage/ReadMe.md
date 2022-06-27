@@ -81,5 +81,4 @@ console.log(contract);
 11. We can see in the transaction tab on ganache that we payed some gas fees for contract creation. 
 ![contract creation](contractCreation.png)
 
-11. You just deployed a contract on a locak blockchain whoa ! 😎
-12. <span style="color:red">some *blue* text</span>
+###You just deployed a contract on a locak blockchain whoa ! 😎
