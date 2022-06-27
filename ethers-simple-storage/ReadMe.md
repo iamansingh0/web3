@@ -100,4 +100,6 @@ Before starting interacting with this contract, I must tell you what this smart 
 ## Deploying it in remix IDE
 It will look like this:
 ---
-![Deployed in remix](remixDeployed.png?style=centerme)
+<p align="center">
+  <img width="200" height="600" src="remixDeployed.png">
+</p>
