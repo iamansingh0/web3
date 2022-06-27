@@ -82,3 +82,4 @@ console.log(contract);
 ![contract creation](contractCreation.png)
 
 11. You just deployed a contract on a locak blockchain whoa ! 😎
+12. <span style="color:red">some *blue* text</span>
