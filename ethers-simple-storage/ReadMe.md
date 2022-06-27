@@ -98,8 +98,8 @@ Before starting interacting with this contract, I must tell you what this smart 
 | 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
 
 ## Deploying it in remix IDE
-It will look like this:
+#### It will look like this:
 ---
 <p align="center">
-  <img width="200" height="600" src="remixDeployed.png">
+  <img width="250" height="500" src="remixDeployed.png">
 </p>
