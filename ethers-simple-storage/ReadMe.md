@@ -124,6 +124,12 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 </p>
 
 ## To Read or Write the contract using rinkeby testnet:
+Scan QR 
 <p align="center">
   <img src="SimpleStorageQR.png">
 </p>
+<p align="center">
+ ### (OR)
+</p>
+Click on link:
+https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code
