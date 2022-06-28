@@ -1,2 +1,4 @@
 .node_modules
 ethers-simple-storage/.env
+ethers-simple-storage/.encrypyKey.json
+ethers-simple-storage/.encryptedKey.json
