@@ -3,4 +3,8 @@ ethers-simple-storage/.env
 ethers-simple-storage/.gitignore
 ethers-simple-storage/.encrypyKey.json
 ethers-simple-storage/.encryptedKey.json
+<<<<<<< HEAD
 fundMe/.env
+=======
+node_modules
+>>>>>>> 93df79fd16409f1f5b900960ce4ba3e74e1d1ea3
