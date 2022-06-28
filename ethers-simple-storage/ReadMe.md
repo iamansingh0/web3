@@ -1,4 +1,4 @@
-# How to deploy a smart contract using Ethers.js.
+# Compile and Deploy smart contract using Ethers.js!
 Hi! So first you need to install **wsl** in your environment. It lets you work on linux environment within your local environment.
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
 
