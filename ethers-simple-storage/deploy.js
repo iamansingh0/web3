@@ -1,13 +1,10 @@
 const ethers = require("ethers");
 const fs = require("fs");
+require("dotenv").config();
 
 async function main() {
-    // HTTP://172.20.64.1:7545  ganache rpc
-    //1b34d42a8140864201db629994e95d044edeb95711f5377018df5d6718e8fc73 private key
-    const provider = new ethers.providers.JsonRpcProvider("http://172.20.64.1:7545");
-    // ethers.Wallet(private key, rpc server)
-    const wallet = new ethers.Wallet("1b34d42a8140864201db629994e95d044edeb95711f5377018df5d6718e8fc73", provider);
-
+    const provider = new ethers.providers.JsonRpcProvider("http://192.168.128.1:7545");
+    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
     const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
     const bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
     const contractFactory = new ethers.ContractFactory(abi, bin, wallet);
@@ -15,8 +12,8 @@ async function main() {
     const contract = await contractFactory.deploy();
     // await -> stop here, wait for the contract to deploy
     // console.log(contract);
-
     const transactionReceipt = await contract.deployTransaction.wait(1); // 1 block confirmation
+    
     // console.log('Deployment Transaction (Transaction Response): ');
     // console.log(contract.deployTransaction);
     // console.log("Transaction Receipt: ");
@@ -40,9 +37,11 @@ async function main() {
     // await sentTxResponse.wait(1);
     // console.log(sentTxResponse);
 
-    // Interact With the contract:
+    // Interact With the receive() function:
+    const storeResponse = await contract.store("69");
+    const storeResponseReceipt = await storeResponse.wait(1);
     const currentFavNumber = await contract.retrieve();
-    console.log(currentFavNumber.toString());
+    console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 }
 
 main()
