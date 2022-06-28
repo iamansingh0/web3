@@ -1,22 +1,25 @@
-const ethers = require("ethers");
-const fs = require("fs-extra");
-require("dotenv").config();
+const ethers = require("ethers")
+const fs = require("fs-extra")
+require("dotenv").config()
 
 async function main() {
-    const provider = new ethers.providers.JsonRpcProvider(process.env.RpcURL);
-    // const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-    const encryptedJson = fs.readFileSync("./.encryptedKey.json", "utf8");
-    let wallet = new ethers.Wallet.fromEncryptedJsonSync(encryptedJson, process.env.password);
-    wallet = await wallet.connect(provider);
-    const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
-    const bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
-    const contractFactory = new ethers.ContractFactory(abi, bin, wallet);
-    console.log("Delploying.....");
-    const contract = await contractFactory.deploy();
+    const provider = new ethers.providers.JsonRpcProvider(process.env.RpcURL)
+    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)
+    // const encryptedJson = fs.readFileSync("./.encryptedKey.json", "utf8")
+    // let wallet = new ethers.Wallet.fromEncryptedJsonSync(
+    //     encryptedJson,
+    //     process.env.password
+    // )
+    // wallet = await wallet.connect(provider)
+    const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8")
+    const bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8")
+    const contractFactory = new ethers.ContractFactory(abi, bin, wallet)
+    console.log("Delploying.....")
+    const contract = await contractFactory.deploy()
     // await -> stop here, wait for the contract to deploy
     // console.log(contract);
-    const transactionReceipt = await contract.deployTransaction.wait(1); // 1 block confirmation
-
+    const transactionReceipt = await contract.deployTransaction.wait(1) // 1 block confirmation
+    console.log(`contract address: ${contract.address}`)
     // console.log('Deployment Transaction (Transaction Response): ');
     // console.log(contract.deployTransaction);
     // console.log("Transaction Receipt: ");
@@ -41,15 +44,15 @@ async function main() {
     // console.log(sentTxResponse);
 
     // Interact With the receive() function:
-    const storeResponse = await contract.store("69");
-    const storeResponseReceipt = await storeResponse.wait(1);
-    const currentFavNumber = await contract.retrieve();
-    console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
+    const storeResponse = await contract.store("69")
+    const storeResponseReceipt = await storeResponse.wait(1)
+    const currentFavNumber = await contract.retrieve()
+    console.log(`Current Favorite Number: ${currentFavNumber.toString()}`)
 }
 
 main()
     .then(() => process.exit(0))
     .catch((error) => {
-        console.error(error);
-        process.exit(1);
-});
+        console.error(error)
+        process.exit(1)
+    })
