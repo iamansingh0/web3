@@ -109,7 +109,7 @@ Before starting interacting with this contract, I must tell you what this smart 
 3. In addPerson, we can store name with theri fav number and to them pass the index in people array, it will return its fav number.
 4. If we pass index in nameToFavNumber, it will return name and their favNumber.
 
-- #### receive() Function:
+- #### store() and receive() Function:
 ```format javascript
 // store() function: 
 const  storeResponse = await  contract.store("69");
@@ -118,3 +118,4 @@ const  storeResponseReceipt = await  storeResponse.wait(1);
 const  currentFavNumber = await  contract.retrieve();
 console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 ```
+##### output: 
