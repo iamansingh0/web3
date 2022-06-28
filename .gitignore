@@ -3,3 +3,4 @@ ethers-simple-storage/.env
 ethers-simple-storage/.gitignore
 ethers-simple-storage/.encrypyKey.json
 ethers-simple-storage/.encryptedKey.json
+node_modules
