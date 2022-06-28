@@ -3,7 +3,7 @@ const fs = require("fs");
 require("dotenv").config();
 
 async function main() {
-    const provider = new ethers.providers.JsonRpcProvider("http://192.168.128.1:7545");
+    const provider = new ethers.providers.JsonRpcProvider(process.env.RpcURL);
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
     const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
     const bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
@@ -13,7 +13,7 @@ async function main() {
     // await -> stop here, wait for the contract to deploy
     // console.log(contract);
     const transactionReceipt = await contract.deployTransaction.wait(1); // 1 block confirmation
-    
+
     // console.log('Deployment Transaction (Transaction Response): ');
     // console.log(contract.deployTransaction);
     // console.log("Transaction Receipt: ");
