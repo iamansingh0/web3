@@ -119,3 +119,6 @@ const  currentFavNumber = await  contract.retrieve();
 console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 ```
 ##### output: 
+<p align="center">
+  <img src="store() and receive().png">
+</p>
