@@ -122,3 +122,8 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 <p align="center">
   <img src="store() and receive().png">
 </p>
+
+## To Read or Write the contract using rinkeby testnet:
+<p align="center">
+  <img src="SimpleStorageQR.png">
+</p>
