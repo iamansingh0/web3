@@ -53,3 +53,28 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 4. Choose **Create a basic sample project** and hit enter
 - yes to .gitignore
 - yes to install dependencies with yarn
+
+## Deploying SimpleStorage From Hardhat
+Before starting this part, I recommend you to go and read a bit of [hardhat](https://hardhat.org/getting-started) documentation to know the basics of hardhat.
+
+#### Follow the steps to deploy SimpleStorage Smart Contract
+1. First delete the `Greeter.sol` file from **contracts** directory and make a new solidity file and write your smart contract code there.
+> For me its SimpleStorage.sol
+2. Match the solidity compiler in your solidity file with `hardhat.config.js` file, if they are different then update the compiler version in `hardhat.config.js` file.
+3. run `yarn hardhat compile`, and the solidity file must be compiled with the output: 
+```
+Downloading compiler 0.8.8
+Compiled 1 Solidity file successfully
+Done in 4.95s.
+```
+4. Go to the **scripts** folder and rename the current *.js* file to **deploy.js**
+5. Delete the file content and make it blank.
+6. Define main function and call it:
+```format javascript
+async function main() {}
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.log(error);
+    process.exit(1);
+  });```
