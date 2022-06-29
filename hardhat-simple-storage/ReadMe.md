@@ -88,4 +88,6 @@ const { ethers } = require("hardhat")
 const contractFactory = await ethers.getContractFactory("SimpleStorage")
 console.log("Deploying...")
 const simpleStorage = await contractFactory.deploy()
+await simpleStorage.deployed()
+console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
