@@ -134,5 +134,3 @@ module.exports = {
   solidity: "0.8.8",
 };
 ```
-=======
-9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎 This hardhat network comes with a default rpc and private key for you!
