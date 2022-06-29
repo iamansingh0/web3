@@ -91,4 +91,4 @@ const simpleStorage = await contractFactory.deploy()
 await simpleStorage.deployed()
 console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
-9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
+9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎 This hardhat network comes with a default rpc and private key for you!
