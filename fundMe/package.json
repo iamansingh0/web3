@@ -12,5 +12,10 @@
   },
   "devDependencies": {
     "hardhat": "^2.9.9"
-  }
+  },
+  "name": "fundMe",
+  "version": "1.0.0",
+  "description": "basic calculator",
+  "main": "index.js",
+  "license": "MIT"
 }
