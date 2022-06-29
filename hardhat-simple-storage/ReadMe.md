@@ -80,7 +80,9 @@ main()
   });
 ```
 7. import [ethers.js](https://docs.ethers.io/v5/) from `hardhat` at the top of the **deploy.js** file.
-- `const { ethers } = require("hardhat")`
+```javascript
+const { ethers } = require("hardhat")
+```
 8. Edit main() function this way to deploy contract:
 ```javascript
 const contractFactory = await ethers.getContractFactory("SimpleStorage")
