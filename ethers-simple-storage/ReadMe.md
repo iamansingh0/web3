@@ -211,4 +211,4 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 </p>
 <p align="center">(OR)</p>
 #### Click this link
-https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code
+[SimpleStorage](https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code)
