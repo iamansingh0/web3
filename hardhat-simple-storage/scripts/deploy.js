@@ -1,4 +1,5 @@
 const { ethers } = require("hardhat")
+require("dotenv").config()
 
 async function main() {
     const contractFactory = await ethers.getContractFactory("SimpleStorage")

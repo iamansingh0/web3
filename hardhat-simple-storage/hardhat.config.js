@@ -17,5 +17,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
+  defaultNetwork: "hardhat",
+  netoworks: {
+    rinkeby: {
+      url: process.env.RINKEBY_RPC_URL,
+      account: [process.env.RINKEBY_PRIVATE_KEY],
+      chainId: 4,
+    },
+  },
   solidity: "0.8.8",
 };

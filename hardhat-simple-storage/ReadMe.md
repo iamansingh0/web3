@@ -92,3 +92,45 @@ await simpleStorage.deployed()
 console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
 9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
+
+## Deploy to a Rinkeby Testnet
+To deploy smart contract to a network other than hardhat network such as [rinkeby](http://www.alchemy.com/overviews/rinkeby-testnet), we need to go through some steps that are given below.
+To deploy smart contract in a network, you basically need two things
+- rpc_url
+- private_key
+1. First you need to go and create an account in [Alchemy](https://www.alchemy.com/)
+2. Choose **Ethereum** and click *get started*.
+3. Create a new app
+```json
+{
+  "teamName": "YOUR_NAME_OR_TEAM_NAME",
+  "appName": "Give_Your_App_aName",
+  "network": "rinkeby"
+}
+```
+4. After creating app, you need to copy its **https** link, that is your network's *RPC_URL*
+5. Now go to your [metamask](https://metamask.io/) account, choose rinkeby testnet network and export private key of your account.
+6. Now add a package called **dotenv** using | `yarn add --dev dotenv`
+7. import it at the top of your deploy.js file:
+```javascript
+require("dotenv").config()
+```
+8. Now create a new file: `.env` and write this code their
+```env
+RINKEBY_RPC_URL = <Your_RPC_URL>
+RINKEBY_PRIVATE_KEY = <Your_Private_Key>
+```
+9. Now edit **hardhat.config.js** file
+```javascript
+module.exports = {
+  defaultNetwork: "hardhat",
+  netoworks: {
+    rinkeby: {
+      url: process.env.RINKEBY_RPC_URL,
+      account: [process.env.RINKEBY_PRIVATE_KEY],
+      chainId: 4,
+    },
+  },
+  solidity: "0.8.8",
+};
+```
