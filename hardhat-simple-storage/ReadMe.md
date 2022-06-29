@@ -91,6 +91,7 @@ const simpleStorage = await contractFactory.deploy()
 await simpleStorage.deployed()
 console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
+<<<<<<< HEAD
 9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
 
 ## Deploy to a Rinkeby Testnet
@@ -134,3 +135,6 @@ module.exports = {
   solidity: "0.8.8",
 };
 ```
+=======
+9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎 This hardhat network comes with a default rpc and private key for you!
+>>>>>>> 9cdd6513d62b542e5c4d3349177bcdae5476be32
