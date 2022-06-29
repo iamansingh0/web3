@@ -70,11 +70,20 @@ Done in 4.95s.
 4. Go to the **scripts** folder and rename the current *.js* file to **deploy.js**
 5. Delete the file content and make it blank.
 6. Define main function and call it:
-```format javascript
+```javascript
 async function main() {}
 main()
   .then(() => process.exit(0))
   .catch((error) => {
     console.log(error);
     process.exit(1);
-  });```
+  });
+```
+7. import [ethers.js](https://docs.ethers.io/v5/) from `hardhat` at the top of the **deploy.js** file.
+- `const { ethers } = require("hardhat")`
+8. Edit main() function this way to deploy contract:
+```javascript
+const contractFactory = await ethers.getContractFactory("SimpleStorage")
+console.log("Deploying...")
+const simpleStorage = await contractFactory.deploy()
+```
