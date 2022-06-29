@@ -27,7 +27,11 @@
     <li><a href="#deploy-the-smart-contract">Deploy the Smart Contract</a></li>
     <li><a href="#interact-with-simplestorage-smart-contract">Interact with SimpleStorage Smart Contract</a></li>
     <li><a href="#deploying-it-in-remix-ide">Deploying it in remix IDE</a></li>
-    <li><a href="#to-read-or-write-the-contract-using-rinkeby-testnet">To Read or Write the contract using rinkeby testnet</a></li>
+    <li><a href="#to-read-or-write-the-contract-using-rinkeby-testnet">To Read or Write the contract using rinkeby testnet</a>
+      <ul>
+        <li><a href="#scan-qr-code">Scan QR Code</a></li>
+        <li><a href="#click-this-link">Click this link</a></li>
+    </li>
   </ol>
 </details>
 <hr>
@@ -199,3 +203,17 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
   <img src="store() and receive().png">
 </p>
 <br />
+
+### To Read or Write the contract using rinkeby testnet
+#### Scan QR Code
+<p align="center">
+  <img src="SimpleStorageQR.png">
+</p>
+<p align="center">
+  (OR)
+</p>
+<strong>**Click this link**</strong>
+<p align="center">
+  <a href="https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code"><img src="https://img.shields.io/static/v1?label=SimpleStorage&message=Link&color=red&link=[https://docs.ethers.io/v5/](https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code)" /></a>
+</p>
+
