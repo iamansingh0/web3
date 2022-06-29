@@ -136,4 +136,3 @@ module.exports = {
 ```
 =======
 9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎 This hardhat network comes with a default rpc and private key for you!
->>>>>>> 9cdd6513d62b542e5c4d3349177bcdae5476be32
