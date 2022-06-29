@@ -209,7 +209,11 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
 <p align="center">
   <img src="SimpleStorageQR.png">
 </p>
+<p align="center">
   (OR)
-### Click this link
-<a href="https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code"><img src="https://img.shields.io/static/v1?label=SimpleStorage&message=Link&color=red&link=[https://docs.ethers.io/v5/](https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code)" /></a>
+</p>
+- Click this link
+<p align="center">
+  <a href="https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code"><img src="https://img.shields.io/static/v1?label=SimpleStorage&message=Link&color=red&link=[https://docs.ethers.io/v5/](https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code)" /></a>
+</p>
 
