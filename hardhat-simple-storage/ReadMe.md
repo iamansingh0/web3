@@ -127,7 +127,7 @@ module.exports = {
   netoworks: {
     rinkeby: {
       url: process.env.RINKEBY_RPC_URL,
-      account: [process.env.RINKEBY_PRIVATE_KEY],
+      accounts: [process.env.RINKEBY_PRIVATE_KEY],
       chainId: 4,
     },
   },
