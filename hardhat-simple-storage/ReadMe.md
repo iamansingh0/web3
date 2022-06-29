@@ -91,7 +91,6 @@ const simpleStorage = await contractFactory.deploy()
 await simpleStorage.deployed()
 console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
-<<<<<<< HEAD
 9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
 
 ## Deploy to a Rinkeby Testnet
