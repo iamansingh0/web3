@@ -37,3 +37,19 @@ After installing wsl, set username and password. Now open vscode and download an
 | 5. ``function store(uint256)``  | It's a function that takes a number and update global variable favoriteNumber to it.        |
 | 6. `function retrieve()`   | It's a view function, it returns the number stored in point 1. variable.       |
 | 7. `function addPerson(name, favNum)` | It is used to fill the array and mapping.
+
+## Setting up Hardhat
+1. Install node.js
+``` 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+2. Install yarn package manager | `corepack enable`
+3. Creating a new *Hardhat* project
+```
+1. yarn init
+2. yarn add --dev hardhat
+3. yarn hardhat
+```
+4. Choose **Create a basic sample project** and hit enter
+- yes to .gitignore
+- yes to install dependencies with yarn
