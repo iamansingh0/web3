@@ -131,7 +131,3 @@ Scan QR
 <p align="center">(OR)</p>
 Click on link:
 https://rinkeby.etherscan.io/address/0x226a7e65cffd1441be2e9c413da4394eab92363a#code
-
-<a href="https://github.com/iamansingh0/web3/tree/master/ethers-simple-storage">
-    <img src="logo.png" alt="Logo" width="80" height="80">
-  </a>
