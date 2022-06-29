@@ -19,27 +19,15 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-<<<<<<< HEAD
         <li><a href="#prerequisites-and-installation">Prerequisites and Installation</a></li>
         <li><a href="#what-does-this-contract-do">What does this contract do</a></li>
-=======
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
->>>>>>> 423354cf60d7837477ef7d0aeb44d5d4b67016f1
       </ul>
     </li>
     <li><a href="#steps-to-compile-the-smart-contract">Steps to Compile the Smart Contract</a></li>
     <li><a href="#deploy-the-smart-contract">Deploy the Smart Contract</a></li>
-<<<<<<< HEAD
     <li><a href="#interact-with-simplestorage-smart-contract">Interact with SimpleStorage Smart Contract</a></li>
     <li><a href="#deploying-it-in-remix-ide">Deploying it in remix IDE</a></li>
     <li><a href="#to-read-or-write-the-contract-using-rinkeby-testnet">To Read or Write the contract using rinkeby testnet</a></li>
-=======
-    <li><a href="#what-does-this-contract-do">What does this contract do</a></li>
-    <li><a href="#interact-with-simplestorage-smart-contract">Interact with SimpleStorage Smart Contract</a></li>
-    <li><a href="#deploying-it-in-remix-ide">Deploying it in remix IDE</a></li>
-    <li><a href="#to-read-or-write-the-contract-using-rinkeby-testnet:">To Read or Write the contract using rinkeby testnet:</a></li>
->>>>>>> 423354cf60d7837477ef7d0aeb44d5d4b67016f1
   </ol>
 </details>
 <hr>
@@ -53,7 +41,6 @@ Let's get started!
 <a href="https://docs.ethers.io/v5/"><img src="https://img.shields.io/static/v1?label=EthersJS&message=^5.6.9&color=green&link=https://docs.ethers.io/v5/" /></a>
 <a href="https://docs.soliditylang.org/en/v0.8.7/contracts.html"><img src="https://img.shields.io/static/v1?label=Solidity&message=0.8.7-fixed&color=orange&link=https://docs.soliditylang.org/en/v0.8.7/contracts.html" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/static/v1?label=Javascript&message=ES2015&color=blue&link=https://developer.mozilla.org/en-US/docs/Web/JavaScript" /></a>
-<<<<<<< HEAD
 
 ## Getting Started
 So before getting started, I want you to make sure that while following all the steps you might get errors so don't let them stop you! Search your error in the `community` and in indexed platforms like **stackoverflow** and **stackEthExchange** etc!
@@ -212,5 +199,3 @@ console.log(`Current Favorite Number: ${currentFavNumber.toString()}`);
   <img src="store() and receive().png">
 </p>
 <br />
-=======
->>>>>>> 423354cf60d7837477ef7d0aeb44d5d4b67016f1
