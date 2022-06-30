@@ -91,7 +91,8 @@ const simpleStorage = await contractFactory.deploy()
 await simpleStorage.deployed()
 console.log(`deployed contract to: ${simpleStorage.address}`)
 ```
-9. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
+9. deploy it using this command | `yarn hardhat run scripts/deploy.js`
+10. Our contract got deployed to default **[hardhat network](https://hardhat.org/hardhat-network)**! 😎
 
 ## Deploy to a Rinkeby Testnet
 To deploy smart contract to a network other than hardhat network such as [rinkeby](http://www.alchemy.com/overviews/rinkeby-testnet), we need to go through some steps that are given below.
@@ -149,7 +150,7 @@ yarn add --dev @nomiclabs/hardhat-etherscan
 ```javascript
 require("@nomiclabs/hardhat-etherscan")
 ```
-- Make an account on [etherscan](etherscan.io)
+- Make an account on [etherscan](https://etherscan.io/)
 - Go to **Api Keys** section on **My Account**
 - Create new Api Key
 - copy it and make a new variable and paste api key
