@@ -149,3 +149,55 @@ yarn add --dev @nomiclabs/hardhat-etherscan
 ```javascript
 require("@nomiclabs/hardhat-etherscan")
 ```
+- Make an account on [etherscan](etherscan.io)
+- Go to **Api Keys** section on **My Account**
+- Create new Api Key
+- copy it and make a new variable and paste api key
+- Edit your **hardhat.config.js** file
+```javascript
+module.exports = {
+    defaultNetwork: "hardhat",
+    networks: {
+        rinkeby: {
+            url: RPC_URL,
+            accounts: [PRIVATE_KEY],
+            chainId: 4,
+        },
+    },
+    solidity: "0.8.8",
+    etherscan: {
+        apikey: process.env.ETHERSCAN_API_KEY,
+    }
+}
+```
+- Add this at the top of your **deploy.js** 
+```js
+const { run, network } = require("hardhat")
+```
+- Create a new function **verify()**
+```js
+async function verify(contractAddress, args) {
+    // use hardhat etherscan plugin
+    console.log("Verifying contract..");
+    try {
+        await run("verify:verify", {
+            address: contractAddress,
+            constructorArguments: args,
+        })
+    } catch(e) {
+        if(e.message.toLowerCase().includes("already verified")) {
+            console.log("Already verified")
+        } else {
+            console.log(e)
+        }
+    }
+}
+```
+- Edit your main() function and add these lines there
+```js
+if(network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY){
+        await simpleStorage.deployTransaction.wait(6)
+        await verify(simpleStorage.address, [])
+    }
+```
+- Now deploy your contract and boom it will be verified and published automatically on [etherscan](https://rinkeby.etherscan.io/)
