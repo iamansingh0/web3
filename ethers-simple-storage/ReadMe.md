@@ -94,7 +94,7 @@ Now we are all set then let's try to compile our smart contract first. To do tha
   - ``yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . [contract-name]``
 
 8. It will be hectic for us to type this heavy command whenver we want to compile our smart contract. So to reduce that work what we can do is we can edit our **package.json** file:
-``` format solidity
+```solidity
 "scripts": {
 "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol"
 }
@@ -109,7 +109,7 @@ For this section, I'll use a tool called **[Ganache](https://trufflesuite.com/ga
  1. Here [ethers.js](https://docs.ethers.io/v5/) comes into play, download it | ``yarn add ethers``
 
  3. Copy Ganache's RPC Server and private key of one of the account, use them in **deploy.js** file this way:
- ``` format javascript
+ ```javascript
 const  ethers = require("ethers");
 async  function  main() {
 // http://0.0.0.0.7545 ganache rpc
@@ -123,16 +123,16 @@ const wallet = new ethers.Wallet("bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a05
 4. Let me tell you how to secure your key without exposing it like above code.
   - Add a package called `dotenv` in node modules | `yarn add dotenv`
   - Add this line in your js file above *main()* fuction
-  ```format javascript
+  ```javascript
      require('dotenv').config();
   ```
   - Now create a new `.env` file and inside it write these two lines of code.
-  ```format javascript
+  ```javascript
     PRIVATE_KEY = bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a0589e2838bcefe54719e
     RpcURL = http://127.0.0.1:7545
   ```
   - Now edit the code from step 3 like this:
-  ```format javascript
+  ```javascript
     const  provider = new  ethers.providers.JsonRpcProvider(process.env.RpcURL);
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
     }
@@ -141,21 +141,21 @@ const wallet = new ethers.Wallet("bd029ee8e1a69a8f64cf0ec081ab5335b442157b396a05
 5. Now that we have provider and wallet, let's go and grab contract details from ***SimpleStorage_sol_SimpleStorage.abi*** and ***SimpleStorage_sol_SimpleStorage.bin*** files. To deploy our contract we need abi and bin data of the contract, so to read data from these files we are gonna need a package called **fs**.
 
 6. On the top of *deploy.js* file add a line:
- ```format solidity
+ ```solidity
 const fs = require("fs");
 ```
 
 7. If package fs doesn't come with your *node_modules*, you can add it | ``yarn add fs ``
 
 8. Now to read these two files, add these given lines in main function:
-```format solidity
+```solidity
 const  abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi", "utf8");
 const  bin = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin", "utf8");
 ```
 9. Now we can create something called contract factory. To deploy a [Contract](https://docs.ethers.io/v5/api/contract/contract/), additional information is needed that is not available on a Contract object itself. Mainly, the bytecode (more specifically the initcode) of a contract is required. [Contract Factory](https://docs.ethers.io/v5/api/contract/contract-factory/) does this job.
 
 10. Add these lines in *deploy.js* **main()** function:
-```format solidity
+```solidity
 const  contractFactory = new  ethers.ContractFactory(abi, bin, wallet);
 console.log("Delploying.....");
 const  contract = await  contractFactory.deploy();
@@ -190,7 +190,7 @@ Before starting interacting with this contract, I must tell you what this smart 
 4. If we pass index in nameToFavNumber, it will return name and their favNumber.
 
 - #### store() and receive() Function:
-```format javascript
+```javascript
 // store() function: 
 const  storeResponse = await  contract.store("69");
 const  storeResponseReceipt = await  storeResponse.wait(1);
