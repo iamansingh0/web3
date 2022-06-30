@@ -138,9 +138,9 @@ module.exports = {
 - `yarn hardhat run scripts/deploy.js --network rinkeby`
 > Don't forget to add `require("dotenv").config()` at the top of the **hardhat.config.js** file.
 11. Our contract got deployed to Rinkeby testnet network! 😎
-<p align="center">
-  <img src="hardhat-rinkeby-deployed.png" width="300" height="100">
+<p align="left">
+  <img src="hardhat-rinkeby-deployed.png" width="600" height="300">
 </p>
-<p align="center">
-  <img src="on-etherscan.png" width="300" height="100">
+<p align="left">
+  <img src="on-etherscan.png" width="600" height="500">
 </p>
