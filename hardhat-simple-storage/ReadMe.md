@@ -141,6 +141,3 @@ module.exports = {
 <p align="center">
   <img src="hardhat-rinkeby-deployed.png" width="700" height="200">
 </p>
-<p align="left">
-  <img src="on-etherscan.png" width="1000" height="350">
-</p>
