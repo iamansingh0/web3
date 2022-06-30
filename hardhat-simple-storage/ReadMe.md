@@ -139,8 +139,8 @@ module.exports = {
 > Don't forget to add `require("dotenv").config()` at the top of the **hardhat.config.js** file.
 11. Our contract got deployed to Rinkeby testnet network! 😎
 <p align="left">
-  <img src="hardhat-rinkeby-deployed.png" width="600" height="300">
+  <img src="hardhat-rinkeby-deployed.png" width="1000" height="200">
 </p>
 <p align="left">
-  <img src="on-etherscan.png" width="600" height="500">
+  <img src="on-etherscan.png" width="1000" height="300">
 </p>
