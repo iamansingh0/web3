@@ -202,6 +202,6 @@ if(network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY){
     }
 ```
 - Now deploy your contract and boom it will be verified and published automatically on [etherscan](https://rinkeby.etherscan.io/)
-< If the verification doesn't complete for you, delete the **artifacts** and **cache** folders and deploy again!
+> If the verification doesn't complete for you, delete the **artifacts** and **cache** folders and deploy again!
 ## Link
 https://rinkeby.etherscan.io/address/0x1BA9d995D59B1AF258A8E57f29Fabf95651243a0#code
