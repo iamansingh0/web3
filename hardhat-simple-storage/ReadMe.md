@@ -137,3 +137,15 @@ module.exports = {
 10. Run this command in your folder terminal to deploy the contract on rinkeby network
 - `yarn hardhat run scripts/deploy.js --network rinkeby`
 > Don't forget to add `require("dotenv").config()` at the top of the **hardhat.config.js** file.
+
+## Verify Contracts Programmatically
+### Using Hardhat Etherscan Plugin
+---
+- Download **hardhat-etherscan** plugin
+```
+yarn add --dev @nomiclabs/hardhat-etherscan
+```
+- Add this at the top of you **hardhat.config.js** file:
+```javascript
+require("@nomiclabs/hardhat-etherscan")
+```

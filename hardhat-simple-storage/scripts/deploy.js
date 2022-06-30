@@ -9,6 +9,11 @@ async function main() {
     console.log(`deployed contract to: ${simpleStorage.address}`)
 }
 
+// automatically verify right after we deploy
+async function verify(contractAddress, args) {
+    // use hardhat etherscan plugin
+}
+
 main()
     .then(() => process.exit(0))
     .catch((error) => {
