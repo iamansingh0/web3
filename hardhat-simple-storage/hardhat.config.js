@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle")
+require("dotenv").config()
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -21,7 +22,7 @@ const RPC_URL = process.env.RINKEBY_RPC_URL
 const PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY
 module.exports = {
     defaultNetwork: "hardhat",
-    netoworks: {
+    networks: {
         rinkeby: {
             url: RPC_URL,
             accounts: [PRIVATE_KEY],

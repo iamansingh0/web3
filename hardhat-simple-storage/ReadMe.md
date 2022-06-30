@@ -134,3 +134,6 @@ module.exports = {
   solidity: "0.8.8",
 };
 ```
+10. Run this command in your folder terminal to deploy the contract on rinkeby network
+- `yarn hardhat run scripts/deploy.js --network rinkeby`
+> Don't forget to add `require("dotenv").config()` at the top of the **hardhat.config.js** file.
