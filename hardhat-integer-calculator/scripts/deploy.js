@@ -14,6 +14,7 @@ async function main() {
         await simpleCalculator.deployTransaction.wait(6);
         await verify(simpleCalculator.address, []);
     }
+    console.log("hello")
 }
 
 async function verify(contractAddress, args) {
