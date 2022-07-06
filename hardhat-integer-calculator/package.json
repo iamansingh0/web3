@@ -13,5 +13,8 @@
     "hardhat": "^2.9.9",
     "prettier": "^2.7.1",
     "prettier-plugin-solidity": "^1.0.0-beta.19"
+  },
+  "dependencies": {
+    "solc": "^0.6.11"
   }
 }
